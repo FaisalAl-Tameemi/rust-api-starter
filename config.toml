@@ -1,0 +1,4 @@
+port=8080
+database_url=""
+host="127.0.0.1"
+app_name="Rust API Starter"
