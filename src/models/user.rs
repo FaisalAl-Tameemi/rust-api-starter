@@ -22,3 +22,9 @@ pub struct NewUser {
     #[validate(length(min = 8, max = 255))]
     pub password: String,
 }
+
+#[derive(Debug, Validate, Serialize, Deserialize)]
+pub struct LoginUser {
+    pub username: String,
+    pub password: String,
+}

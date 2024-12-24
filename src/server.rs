@@ -19,5 +19,5 @@ pub fn initialize(cfg: &mut web::ServiceConfig) {
         app_name: CONFIG.app_name.clone()
     }));
     cfg.service(index);
-    cfg.service((users::list, users::get, users::create));
+    cfg.service((users::list, users::get, users::create, users::login));
 }
