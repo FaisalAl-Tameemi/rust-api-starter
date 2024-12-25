@@ -9,6 +9,7 @@ pub struct AppConfig {
     pub port: u16,
     pub host: String,
     pub app_name: String,
+    pub jwt_secret: String,
 }
 
 pub static CONFIG: Lazy<AppConfig> = Lazy::new(|| {

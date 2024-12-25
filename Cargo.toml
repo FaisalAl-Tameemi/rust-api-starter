@@ -22,3 +22,4 @@ thiserror = "2.0.9"
 pq = "1.4.3"
 chrono = { version = "0.4.39", features = ["serde"] }
 bcrypt = "0.16.0"
+jsonwebtoken = "9.3.0"

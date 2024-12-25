@@ -2,3 +2,4 @@ port=8080
 database_url="postgresql://postgres:postgres@localhost:5432/postgres"
 host="127.0.0.1"
 app_name="Rust API Starter"
+jwt_secret="256-bit-secret-placeholder"

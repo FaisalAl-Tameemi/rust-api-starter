@@ -62,3 +62,9 @@ impl From<AppError> for std::io::Error {
         std::io::Error::new(std::io::ErrorKind::Other, err.to_string())
     }
 }
+
+impl From<jsonwebtoken::errors::Error> for AppError {
+    fn from(err: jsonwebtoken::errors::Error) -> Self {
+        AppError::new(401).message("Invalid token")
+    }
+}

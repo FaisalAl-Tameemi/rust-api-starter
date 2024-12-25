@@ -1,6 +1,6 @@
 use actix_web::{get, web};
 use actix_web_validator::{JsonConfig, PathConfig, QueryConfig};
-use crate::{api::users, config::CONFIG, util::error::{handle_error, json_handle_error}};
+use crate::{api::{posts, users}, config::CONFIG, util::error::{handle_error, json_handle_error}};
 
 pub struct AppState {
     app_name: String,
@@ -20,4 +20,5 @@ pub fn initialize(cfg: &mut web::ServiceConfig) {
     }));
     cfg.service(index);
     cfg.service((users::list, users::get, users::create, users::login));
+    cfg.service((posts::list));
 }
